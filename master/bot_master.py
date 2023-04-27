@@ -17,6 +17,9 @@ def run_bot() -> None:
     )
     
     application.add_handler(CommandHandler("start", tu.start_handle))
+    application.add_handler(CommandHandler("help", tu.help_handle))
+    application.add_handler(CommandHandler("quit", tu.quit_handle))
+
 
     # start the bot
     application.run_polling()
